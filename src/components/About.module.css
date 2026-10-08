@@ -1,0 +1,107 @@
+.section {
+  padding: 110px 8% 90px;
+  background: var(--bg-2);
+}
+.section > *, .grid, .stats { max-width: 1200px; margin-left: auto; margin-right: auto; }
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: 40px;
+  align-items: start;
+}
+
+.bio p {
+  font-size: 16.5px;
+  line-height: 1.85;
+  color: var(--text-2);
+  margin-bottom: 18px;
+}
+
+.edu {
+  position: relative;
+  background: linear-gradient(160deg, var(--surface-2), var(--surface));
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 28px;
+  overflow: hidden;
+}
+.edu::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: var(--grad);
+}
+
+.eduIcon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: rgba(92, 107, 255, 0.14);
+  color: var(--accent-2);
+  margin-bottom: 18px;
+}
+.eduLabel {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 8px;
+}
+.school {
+  font-family: var(--font-head);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+.degree { color: var(--text-2); font-size: 14.5px; margin-bottom: 16px; }
+.eduMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 12.5px;
+  font-family: var(--font-head);
+  font-weight: 600;
+}
+.eduMeta span {
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-2);
+}
+.eduMeta .cgpa { background: rgba(52, 211, 153, 0.12); color: #6EE7B7; }
+.eduLoc { margin-top: 14px; font-size: 13px; color: var(--text-3); }
+
+.stats {
+  margin-top: 64px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.stat { background: var(--surface); padding: 28px 22px; text-align: center; }
+.statValue {
+  font-family: var(--font-head);
+  font-size: clamp(32px, 4vw, 46px);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.statValue span { margin-left: 1px; }
+.statLabel { font-size: 13px; color: var(--text-3); margin-top: 4px; }
+
+@media (max-width: 860px) {
+  .grid { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

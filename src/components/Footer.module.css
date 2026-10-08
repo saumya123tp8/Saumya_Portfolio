@@ -1,0 +1,14 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 26px 8%;
+  background: #050813;
+  border-top: 1px solid var(--border);
+  color: var(--text-3);
+  font-size: 13px;
+  font-family: var(--font-head);
+}
+.footer a { color: var(--accent-2); text-decoration: none; }
+.footer a:hover { text-decoration: underline; }

@@ -1,0 +1,28 @@
+.wrapper {
+  margin-bottom: 48px;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  margin-bottom: 10px;
+}
+
+.title {
+  font-family: var(--font-head);
+  font-size: clamp(30px, 4.4vw, 46px);
+  font-weight: 800;
+  letter-spacing: -1.2px;
+  color: var(--text);
+}
+
+.divider {
+  width: 64px;
+  height: 4px;
+  border-radius: 4px;
+  background: var(--grad);
+  margin-top: 16px;
+}
